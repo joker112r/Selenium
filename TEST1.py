@@ -27,7 +27,6 @@ product_3.click()
 checkout_button = driver.find_element(By.CSS_SELECTOR,'[href="https://easysmarthub.ru/checkout/"]')
 checkout_button.click()
 
-# Заполнение полей оформления заказа
 email_field = driver.find_element(By.ID,'billing_email')
 email_field.send_keys("joker112r@gmail.com")
 
@@ -63,7 +62,7 @@ emlg = driver.find_element(By.CSS_SELECTOR, '[data-qa-bankcard-field-name="invoi
 emlg.send_keys('joker112r@gmail.com')
 subm = driver.find_element(By.CSS_SELECTOR, '[type="submit"]')
 subm.click()
-# Проверка успешности теста
+
 confirmation_message = WebDriverWait(driver, 10).until(
     EC.presence_of_element_located((By.CSS_SELECTOR, ".confirmation-message"))
 )
